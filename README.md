@@ -6,31 +6,31 @@ final year project
 opencmd:
 Step 1: Git Repository Setup Karein (Pehli Baar)
 Bash
-# Apne local system par repository clone karne ke liye
+# for clone
 git clone https://github.com/Ashutoshgupta618/Vocal-X.git
-# Project folder ke andar jane ke liye
-cd Vocal-X 
+cd vocal_X
 
-Step 2: Nayi Feature Branch Banayein
-Direct main me kaam na karke ek nayi branch banayein:
+#  BY Direct ( from your system to git)
+cd vocal-X
+git init
 
-Bash
+git remote add origin https://github.com/Ashutoshgupta618/Vocal-X.git
+
+
+Step 2 (optional : Latest Code Download Karein from github (git pull) ) 
+Ab main branch ka saara code apne system par lene ke liye pull chalayein:
+# Code download aur merge karne ke liye
+git pull origin main
+
+--pull request or to paste your code in git
 # Nayi branch banakar uspar switch karne ke liye
 git checkout -b feature/new-folder-name
 
-Step 3: Local Folder Banayein Aur Code Add Karein
-apni files us folder me daalo
-
-Step 4: Changes Staging Aur Commit Karein
-Bash
-# Naye folder aur saari nayi files ko add karne ke liye
+-- put all files on this--
 git add .
-# Changes ko message ke saath commit karne ke liye
+
 git commit -m "Added new module folder"
 
-Step 5: Nayi Branch Ko GitHub Par Push Karein
-Bash
-# Apni nayi branch ko GitHub par upload karne ke liye
 git push -u origin feature/new-folder-name
 
 Step 6: GitHub Par Pull Request (PR) Bana Kar Merge Karein
