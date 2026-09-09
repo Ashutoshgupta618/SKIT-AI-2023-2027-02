@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-
+import Navbar from './components/Navbar'
 function App() {
   const [isRecording, setIsRecording] = useState(false)
 
@@ -23,20 +23,7 @@ function App() {
   }
   return (
     <div className="app">
-      <header className="navbar">
-        <div className="logo">PolyVoice</div>
-
-        <nav>
-          <a href="#translate">Translate</a>
-          <a href="#history">History</a>
-          <a href="#settings">Settings</a>
-        </nav>
-
-        <div className="account">
-          <button className="login-btn">Log in</button>
-          <button className="signup-btn">Sign up</button>
-        </div>
-      </header>
+       <Navbar />
 
       <main>
         <section className="hero-section">
@@ -59,12 +46,17 @@ function App() {
             <div className="language-select">
               <label>From</label>
               <select defaultValue="English">
-                <option>English</option>
                 <option>Hindi</option>
-                <option>Spanish</option>
-                <option>French</option>
-                <option>German</option>
-                <option>Japanese</option>
+                  <option>English</option>
+                  <option>Bengali</option>
+                  <option>Gujarati</option>
+                  <option>Kannada</option>
+                  <option>Malayalam</option>
+                  <option>Marathi</option>
+                  <option>Odia</option>
+                  <option>Punjabi</option>
+                  <option>Tamil</option>
+                  <option>Telugu</option>
               </select>
             </div>
 
@@ -74,11 +66,16 @@ function App() {
               <label>To</label>
               <select defaultValue="Hindi">
                 <option>Hindi</option>
-                <option>English</option>
-                <option>Spanish</option>
-                <option>French</option>
-                <option>German</option>
-                <option>Japanese</option>
+                  <option>English</option>
+                  <option>Bengali</option>
+                  <option>Gujarati</option>
+                  <option>Kannada</option>
+                  <option>Malayalam</option>
+                  <option>Marathi</option>
+                  <option>Odia</option>
+                  <option>Punjabi</option>
+                  <option>Tamil</option>
+                  <option>Telugu</option>
               </select>
             </div>
           </div>
