@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate Weekly PDF Report
         run: |
-          python generate_report.py weekly
+          python generate_code.py weekly
 
       - name: Move PDF to Weekly Reports Directory & Commit to Repository
         run: |
