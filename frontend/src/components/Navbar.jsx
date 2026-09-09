@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <header className="navbar">
-      <div className="logo">PolyVoice</div>
+      <div className="logo">VOCAL-X</div>
 
       <nav>
         <a href="#translate">Translate</a>
