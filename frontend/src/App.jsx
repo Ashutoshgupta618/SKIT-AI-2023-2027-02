@@ -1,10 +1,24 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
+import LanguageSelector from './components/LanguageSelector'
 function App() {
   const [isRecording, setIsRecording] = useState(false)
 
   const [recognizedText, setRecognizedText] = useState('')
+  const languages = [
+  'English',
+  'Hindi',
+  'Bengali',
+  'Gujarati',
+  'Kannada',
+  'Malayalam',
+  'Marathi',
+  'Odia',
+  'Punjabi',
+  'Tamil',
+  'Telugu',
+]
 
   const handleMicClick = () => {
 
@@ -43,41 +57,21 @@ function App() {
 
         <section className="translator" id="translate">
           <div className="language-row">
-            <div className="language-select">
-              <label>From</label>
-              <select defaultValue="English">
-                <option>Hindi</option>
-                  <option>English</option>
-                  <option>Bengali</option>
-                  <option>Gujarati</option>
-                  <option>Kannada</option>
-                  <option>Malayalam</option>
-                  <option>Marathi</option>
-                  <option>Odia</option>
-                  <option>Punjabi</option>
-                  <option>Tamil</option>
-                  <option>Telugu</option>
-              </select>
-            </div>
+           <LanguageSelector
+             label="From"
+             value="English"
+             onChange={() => {}}
+             languages={languages}
+           />
 
             <button className="swap-btn">⇄</button>
 
-            <div className="language-select">
-              <label>To</label>
-              <select defaultValue="Hindi">
-                <option>Hindi</option>
-                  <option>English</option>
-                  <option>Bengali</option>
-                  <option>Gujarati</option>
-                  <option>Kannada</option>
-                  <option>Malayalam</option>
-                  <option>Marathi</option>
-                  <option>Odia</option>
-                  <option>Punjabi</option>
-                  <option>Tamil</option>
-                  <option>Telugu</option>
-              </select>
-            </div>
+            <LanguageSelector
+             label="To"
+             value="Hindi"
+             onChange={() => {}}
+              languages={languages}
+            />
           </div>
 
           <div className="translation-grid">
