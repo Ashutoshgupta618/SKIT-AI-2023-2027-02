@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import History from './pages/History'
+import Settings from './pages/Settings'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -16,6 +17,7 @@ function App() {
 
       {currentPage === 'home' && <Home />}
       {currentPage === 'history' && <History />}
+      {currentPage === 'settings' && <Settings />}
 
       <footer>
         <p>PolyVoice · Multilingual Voice Communication</p>

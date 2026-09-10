@@ -24,7 +24,15 @@ function Navbar({ currentPage, onNavigate }) {
           History
         </a>
 
-        <a href="#settings">Settings</a>
+        <a
+  href="#settings"
+  onClick={(e) => {
+    e.preventDefault()
+    onNavigate('settings')
+  }}
+>
+  Settings
+</a>
       </nav>
 
       <div className="account">
