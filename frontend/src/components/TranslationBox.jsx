@@ -1,3 +1,5 @@
+import AudioPlayer from './AudioPlayer'
+
 function TranslationBox({ translatedText }) {
   return (
     <div className="translation-card">
@@ -11,6 +13,8 @@ function TranslationBox({ translatedText }) {
           {translatedText || 'Your translated text will appear here...'}
         </p>
       </div>
+
+      <AudioPlayer />
     </div>
   )
 }
