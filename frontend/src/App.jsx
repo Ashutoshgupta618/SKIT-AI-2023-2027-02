@@ -2,8 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import LanguageSelector from './components/LanguageSelector'
+import VoiceRecorder from './components/VoiceRecorder'
 function App() {
-  const [isRecording, setIsRecording] = useState(false)
+  // const [isRecording, setIsRecording] = useState(false)
 
   const [recognizedText, setRecognizedText] = useState('')
   const languages = [
@@ -19,22 +20,14 @@ function App() {
   'Tamil',
   'Telugu',
 ]
-
-  const handleMicClick = () => {
-
-    setIsRecording((prev) => !prev)
-
-    if (!isRecording) {
-
-      setRecognizedText('Listening...')
-
-    } else {
-
-      setRecognizedText('Your recognized speech will appear here...')
-
-    }
-
-  }
+  // const handleMicClick = () => {
+  //   setIsRecording((prev) => !prev)
+  //   if (!isRecording) {
+  //     setRecognizedText('Listening...')
+  //   } else {
+  //     setRecognizedText('Your recognized speech will appear here...')
+  //   }
+  // }
   return (
     <div className="app">
        <Navbar />
@@ -81,14 +74,11 @@ function App() {
                 <span className="status">● Ready</span>
               </div>
 
-              <div className="voice-area">
-                <button
-                  className={`mic-btn ${isRecording ? 'recording' : ''}`}
-                   onClick={handleMicClick} >🎙️
-                </button>
-                <p>{isRecording ? 'Listening...' : 'Tap to speak'}</p>
-                <small>Your speech will appear here</small>
-              </div>
+              <VoiceRecorder
+  onRecordingComplete={() => {
+    setRecognizedText('Recording completed. Ready for speech recognition.')
+  }}
+/>
 
               <div className="text-output">
                  {recognizedText || 'Your recognized speech will appear here...'}
