@@ -1,11 +1,29 @@
-function Navbar() {
+function Navbar({ currentPage, onNavigate }) {
   return (
     <header className="navbar">
       <div className="logo">VOCAL-X</div>
 
       <nav>
-        <a href="#translate">Translate</a>
-        <a href="#history">History</a>
+        <a
+          href="#translate"
+          onClick={(e) => {
+            e.preventDefault()
+            onNavigate('home')
+          }}
+        >
+          Translate
+        </a>
+
+        <a
+          href="#history"
+          onClick={(e) => {
+            e.preventDefault()
+            onNavigate('history')
+          }}
+        >
+          History
+        </a>
+
         <a href="#settings">Settings</a>
       </nav>
 

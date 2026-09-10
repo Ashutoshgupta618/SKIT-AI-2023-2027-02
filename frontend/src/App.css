@@ -332,3 +332,81 @@ footer {
     min-width: 125px;
   }
 }
+/* History Page */
+
+.page-container {
+  min-height: calc(100vh - 80px);
+  padding: 80px 8% 100px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.page-description {
+  max-width: 600px;
+  margin: 20px auto 0;
+  color: #8f93a3;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.history-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.history-empty {
+  min-height: 320px;
+  padding: 60px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.history-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(129, 118, 255, 0.12);
+  color: #8176ff;
+  font-size: 30px;
+}
+
+.history-empty h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.history-empty p {
+  max-width: 500px;
+  margin: 0 auto 28px;
+  color: #8f93a3;
+  line-height: 1.6;
+}
+
+.history-action {
+  display: inline-block;
+  color: #8176ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.history-action:hover {
+  opacity: 0.75;
+}
+.page-header h1 {
+  line-height: 1.15;
+}
+
+.page-header h1 span {
+  display: inline-block;
+}
