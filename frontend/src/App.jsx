@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import LanguageSelector from './components/LanguageSelector'
 import VoiceRecorder from './components/VoiceRecorder'
+import TranslationBox from './components/TranslationBox'
 function App() {
   // const [isRecording, setIsRecording] = useState(false)
 
@@ -85,20 +86,9 @@ function App() {
               </div> 
             </div>
 
-            <div className="translation-card">
-              <div className="card-header">
-                <span>TRANSLATION</span>
-                <span className="status">Ready</span>
-              </div>
-
-              <div className="translated-text">
-                <p>Your translated text will appear here...</p>
-              </div>
-
-              <button className="audio-btn">
-                🔊 Play translated audio
-              </button>
-            </div>
+           <TranslationBox
+  translatedText=""
+/>
           </div>
 
           <button className="translate-btn">
