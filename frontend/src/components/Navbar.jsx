@@ -36,8 +36,18 @@ function Navbar({ currentPage, onNavigate }) {
       </nav>
 
       <div className="account">
-        <button className="login-btn">Log in</button>
-        <button className="signup-btn">Sign up</button>
+        <button
+  className="login-btn"
+  onClick={() => onNavigate('login')}
+>
+  Log in
+</button>
+        <button
+  className="signup-btn"
+  onClick={() => onNavigate('signup')}
+>
+  Sign up
+</button>
       </div>
     </header>
   )
