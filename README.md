@@ -7,14 +7,14 @@ opencmd:
 Step 1: Git Repository Setup Karein (Pehli Baar)
 Bash
 # for clone
-git clone https://github.com/Ashutoshgupta618/Vocal-X.git
+git clone https://github.com/Ashutoshgupta618/SKIT-AI-2023-2027-02.git
 cd vocal_X
 
 #  BY Direct ( from your system to git)
 cd vocal-X
 git init
 
-git remote add origin https://github.com/Ashutoshgupta618/Vocal-X.git
+git remote add origin https://github.com/Ashutoshgupta618/SKIT-AI-2023-2027-02.git
 
 
 Step 2 (optional : Latest Code Download Karein from github (git pull) ) 
