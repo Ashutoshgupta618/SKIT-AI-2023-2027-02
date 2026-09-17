@@ -1,6 +1,7 @@
 import pandas as pd
 
 # take data from previous save 
+
 df = pd.read_csv("audio_metadata.csv")
 print("Checkpoint loaded! Dataset shape:", df.shape)
 
