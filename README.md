@@ -12,6 +12,7 @@ cd vocal_X
 
 #  BY Direct ( from your system to git)
 cd vocal-X
+
 git init
 
 git remote add origin https://github.com/Ashutoshgupta618/SKIT-AI-2023-2027-02.git
@@ -27,6 +28,7 @@ git pull origin main
 git checkout -b feature/new-folder-name
 
 -- put all files on this--
+
 git add .
 
 git commit -m "Added new module folder"
