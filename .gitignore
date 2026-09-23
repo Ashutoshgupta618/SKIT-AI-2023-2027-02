@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+.venv-data/
+venv/
+
+# Local datasets
+data_pipeline/raw/
+data_pipeline/processed/
+
+# Generated metadata and reports
+data_pipeline/metadata/*.csv
+data_pipeline/reports/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
