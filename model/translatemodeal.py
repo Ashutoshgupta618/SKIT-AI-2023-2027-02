@@ -1,8 +1,4 @@
 
-# ============================================================
-# TRANSLATION MODEL
-# ============================================================
-
 from transformers import (
     AutoTokenizer,
     AutoModelForSeq2SeqLM
@@ -23,10 +19,6 @@ translation_model = AutoModelForSeq2SeqLM.from_pretrained(
 print(
     "Translation model loaded successfully."
 )
-
-# ============================================================
-# LANGUAGE CODE MAPPING
-# ============================================================
 
 LANGUAGE_CODES = {
 
@@ -60,9 +52,7 @@ print(
     TARGET_LANGUAGE
 )
 
-# ============================================================
-# TRANSLATION FUNCTION
-# ============================================================
+# initial use eng . as target after finish aadd more
 
 def translate_to_english(
     text,
@@ -119,11 +109,6 @@ def translate_to_english(
 
         return ""
 
-
-# ============================================================
-# TRANSLATE TRANSCRIPTIONS
-# ============================================================
-
 translation_results = []
 
 for _, row in tqdm(
@@ -175,10 +160,6 @@ display(
     translation_df.head(20)
 )
 
-# ============================================================
-# SAVE TRANSLATION RESULTS
-# ============================================================
-
 translation_output = (
     METADATA_DIR /
     "translation_results.csv"
@@ -193,10 +174,6 @@ print(
     "Translation results saved to:",
     translation_output
 )
-
-# ============================================================
-# PIPELINE SUMMARY
-# ============================================================
 
 print("=" * 60)
 print("SPEECH-TO-TEXT & TRANSLATION PIPELINE SUMMARY")
