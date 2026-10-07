@@ -1,9 +1,5 @@
 !pip install -q openai-whisper transformers sentencepiece
 
-# ============================================================
-# IMPORT LIBRARIES
-# ============================================================
-
 import whisper
 import pandas as pd
 from pathlib import Path
@@ -11,9 +7,6 @@ from tqdm.auto import tqdm
 
 print("Libraries imported successfully.")
 
-# ============================================================
-# LOAD PROCESSED AUDIO METADATA
-# ============================================================
 
 METADATA_DIR = Path(PROJECT_DIR) / "metadata"
 PROCESSED_DIR = Path(PROJECT_DIR) / "processed"
@@ -33,18 +26,11 @@ print(
 
 display(processed_df.head())
 
-
-# ============================================================
-# LOAD ASR MODEL
-# ============================================================
+#use whisper base model for asr -->
 
 model = whisper.load_model("base")
 
 print("Whisper ASR model loaded successfully.")
-
-# ============================================================
-# SPEECH TO TEXT
-# ============================================================
 
 asr_results = []
 
@@ -120,9 +106,7 @@ print(
 
 display(asr_df.head())
 
-# ============================================================
-# CHECK ASR RESULTS
-# ============================================================
+
 
 print(
     "Total audio tested:",
@@ -150,9 +134,7 @@ display(
     ].head(20)
 )
 
-# ============================================================
-# SAVE ASR RESULTS
-# ============================================================
+
 
 asr_output_file = (
     METADATA_DIR / "asr_results.csv"
