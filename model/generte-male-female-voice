@@ -1,0 +1,49 @@
+"""
+Generate sample voice audio clips for testing multilingual translation and voice cloning.
+"""
+
+import sys
+import numpy as np
+import soundfile as sf
+from pathlib import Path
+
+# Add project root to sys.path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+from backend.config import SAMPLES_DIR
+
+def generate_reference_samples():
+    sr = 16000
+    duration = 4.0  # seconds
+    t = np.linspace(0, duration, int(sr * duration), endpoint=False)
+
+    # 1. Male voice reference harmonic simulation (~130 Hz fundamental)
+    f0_male = 130.0
+    male_signal = (
+        0.5 * np.sin(2 * np.pi * f0_male * t) +
+        0.3 * np.sin(2 * np.pi * (f0_male * 2) * t) +
+        0.2 * np.sin(2 * np.pi * (f0_male * 3) * t) +
+        0.1 * np.sin(2 * np.pi * 800.0 * t) # Formant F1
+    )
+    # Speech envelope
+    envelope = np.sin(np.pi * t / duration) ** 2
+    male_audio = (male_signal * envelope).astype(np.float32)
+    male_path = SAMPLES_DIR / "sample_male_voice.wav"
+    sf.write(str(male_path), male_audio, sr)
+
+    # 2. Female voice reference harmonic simulation (~220 Hz fundamental)
+    f0_female = 220.0
+    female_signal = (
+        0.5 * np.sin(2 * np.pi * f0_female * t) +
+        0.35 * np.sin(2 * np.pi * (f0_female * 2) * t) +
+        0.2 * np.sin(2 * np.pi * (f0_female * 3) * t) +
+        0.15 * np.sin(2 * np.pi * 1200.0 * t) # Formant F1
+    )
+    female_audio = (female_signal * envelope).astype(np.float32)
+    female_path = SAMPLES_DIR / "sample_female_voice.wav"
+    sf.write(str(female_path), female_audio, sr)
+
+    print(f"Generated sample reference audios in {SAMPLES_DIR}")
+
+if __name__ == "__main__":
+    generate_reference_samples()
