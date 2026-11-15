@@ -21,3 +21,24 @@ data_pipeline/reports/
 
 # macOS
 .DS_Store
+# Backend environment and secrets
+backend/backendenv/
+backend/.env
+
+# Python environments
+.venv/
+.venv-data/
+
+# Model weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+
+# IDE
+.vscode/
+
+# Environment files
+.env
+.env.*

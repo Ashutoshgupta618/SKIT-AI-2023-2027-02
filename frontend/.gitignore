@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backend
+backend/backendenv/
+backend/.env
+
+# Model files
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+.env.*
