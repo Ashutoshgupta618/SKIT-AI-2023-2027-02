@@ -235,7 +235,7 @@ def generate_report():
     elements.append(Spacer(1, 6))
     elements.append(Paragraph(
         "Generated from Git commit history | "
-        "Project: AI Powered Smart Contracts for Automated Decision Making",
+        "Project: Vocal-X multimedia translation",
         subtitle_style
     ))
 
