@@ -1,0 +1,8 @@
+backend
+cd ~/Projects/Vocal-X/backend
+./backendenv/bin/python -m uvicorn app.main:app --reload
+
+
+fronted
+cd ~/Projects/Vocal-X/frontend
+npm run dev
