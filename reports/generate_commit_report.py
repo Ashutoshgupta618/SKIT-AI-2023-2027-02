@@ -17,7 +17,7 @@ from reportlab.platypus import (
 # CONFIGURATION
 # --------------------------------------------------
 
-PROJECT_NAME = "SKIT-AI-2023-2027-13"
+PROJECT_NAME = "SKIT-AI-2023-2027-02"
 BRANCH = "main"
 
 OUTPUT_DIR = "complete_reports"
