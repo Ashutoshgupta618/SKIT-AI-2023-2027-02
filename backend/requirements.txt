@@ -1,0 +1,44 @@
+annotated-doc==0.0.6
+annotated-types==0.8.0
+anyio==4.16.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==26.2.0
+cffi==2.1.1
+click==8.5.1
+cryptography==50.0.2
+dnspython==2.9.2
+email-validator==2.4.0
+fastapi==0.163.0
+h11==0.16.0
+idna==3.20
+opentelemetry-api==1.45.2
+psycopg==3.3.9
+psycopg-binary==3.3.9
+pwdlib==0.4.0
+pycparser==3.12
+pydantic==2.14.3
+pydantic-settings==2.16.3
+pydantic_core==2.50.4
+PyJWT==2.15.1
+python-dotenv==1.2.4
+SQLAlchemy==2.1.8
+starlette==1.10.0
+typing-inspection==0.4.5
+typing_extensions==4.16.0
+uvicorn==0.54.0
+
+# Speech Recognition
+openai-whisper==20250625
+
+# Translation
+transformers==5.23.0
+sentencepiece==0.2.3
+
+# Deep Learning
+torch==2.15.0
+
+# Text to Speech
+gTTS==2.5.4
+
+# Audio Upload
+python-multipart==0.0.33
